@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+*{
+  box-sizing: border-box;
+}
+.header{
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size:50px
+}
+
+input{
+  width: 270px;
+  border:1px #ccc solid;
+  height:30px;
+  border-radius: 5px;
+}
+h4{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width:1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  justify-content: space-around;
+ 
+}
+
+.inputs {
+  
+  padding: 10px;
+  flex: 50%;
+}
+
+.graph {
+ 
+  padding: 10px;
+  flex: 50%;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    width:900px
+  }
+  
+  .graph{
+    width:470px
+  }
+  .inputs{
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+ .header {
+    font-size: 40px;
+  }
+  .graph{
+    width:400px
+  }
+  .inputs{
+    margin-left: 100px;
+    width:400px
+  }
+  .container {
+    flex-direction: column;
+    width:700px
+  }
+ 
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+     font-size: 30px;
+   }
+   .inputs{
+    margin-left: 100px;
+    width:400px
+  }
+  .container {
+    flex-direction: column;
+    width:600px
+  }
+  h4{
+    font-size: 15px;
+  }
+  h5{
+    font-size: 10px
+  }
+ }
+
+ @media screen and (max-width: 500px) {
+  .header {
+     font-size: 20px;
+   }
+   h4{
+     font-size: 12px;
+   }
+   .inputs{
+    margin-left: 50px;
+  }
+  .container {
+    flex-direction: column;
+    width:90%
+  }h5{
+    font-size: 8px
+  }
+
+ }
+ @media screen and (max-width: 400px) {
+  .header {
+     font-size: 20px;
+   }
+   h4{
+     font-size: 10px;
+   }
+   .inputs{
+    margin-left: 20px;
+  }
+  .container {
+    flex-direction: column;
+    width:90%
+  }
+  h5{
+    font-size: 8px
+  }
+
+ }
+
+ @media screen and (max-width: 350px) {
+  .header {
+     font-size: 20px;
+   }
+   h4{
+     font-size: 10px;
+   }
+   .inputs{
+    margin-left: 20px;
+  }
+  .container {
+    flex-direction: column;
+    width:90%
+  }
+  h5{
+    font-size: 8px
+  }
+
+ }
+
+ .modal{
+   display:flex;
+   flex-direction: row;
+   justify-content: space-around;
+   box-shadow: 10px 10px 5px #888;
+   margin-bottom: 30px;
+   border: #ccc 1px solid;
+   
+ }
+
+ h5{
+   text-align: center;
+   font-weight: normal;
+   font-size: 20px;
+ }
+ .btn {
+  margin-left:100px; 
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: .5em 1.25em;
+  background: var(--clr-accent,#02B6E1);
+  border-radius: .25em;
+  transition:
+    transform 250ms ease-in-out,
+    opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: .9;
+}
