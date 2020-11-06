@@ -78,7 +78,7 @@ class Calculator extends Component {
                     </div>
                 <ReactFC {...chartConfigs} />
                 <p style={{color:"#49DCFA",textAlign:"center"}}>Assumptions</p>
-                {total!==0||NaN ? <h3 style={{fontWeight:"normal"}}>A serious illness with recovery lasting <span style={{color:"#49DCFA"}}>12 months</span> could put your
+                {total!==0 ? <h3 style={{fontWeight:"normal"}}>A serious illness with recovery lasting <span style={{color:"#49DCFA"}}>12 months</span> could put your
                     finances down by <span style={{color:"#49DCFA"}}>${total}</span> today and by <span style={{color:"#49DCFA"}}>${total*1.3}</span> in 10 years.</h3>:null}
                      <a href="#" class="btn">Start Comparing Quotes</a>
                 </div>
