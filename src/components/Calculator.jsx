@@ -21,16 +21,18 @@ class Calculator extends Component {
         const a5= parseInt(this.state.v5)
         
         var total=a1+a2+a3+a4-a5
+        var newTotal =(isNaN(total) ? 0 : total);
+        
         
         console.log(total)
         const chartData = [
             {
               label: "Estimated Cost",
-              value: total
+              value: newTotal
             },
             {
               label: "Estimated Cost after 10 years",
-              value: (total)*1.3
+              value: (newTotal)*1.3
             }
           ];
           
@@ -55,22 +57,20 @@ class Calculator extends Component {
             <div className="container">
                 <div className="inputs">
                     <h4>Desired replacement income (after-tax)</h4>
-                    <input type="number" placeholder="Enter Amount in $"
-                     onChange={(e)=>setTimeout(()=>{this.setState({v1:e.target.value})},3000)} />
+                    <input  placeholder="Enter Amount in $"
+                     onChange={(e)=>setTimeout(()=>{this.setState({v1:e.target.value})},3000)}/>
                     <h4>Out-of-pocket healthcare expenses</h4>
-                    <input type="number" placeholder="Enter Amount in $" 
+                    <input  placeholder="Enter Amount in $" 
                      onChange={(e)=>setTimeout(()=>{this.setState({v2:e.target.value})},3000)}/>
                     <h4>Home modification expenses</h4>
-                    <input type="number" placeholder="Enter Amount in $"
+                    <input  placeholder="Enter Amount in $"
                     onChange={(e)=>setTimeout(()=>{this.setState({v3:e.target.value})},3000)}/>
                     <h4>Medical homecare expenses</h4>
-                    <input type="number" placeholder="Enter Amount in $"
+                    <input placeholder="Enter Amount in $"
                     onChange={(e)=>setTimeout(()=>{this.setState({v4:e.target.value})},3000)}/>
                     <h4>Other expenses (transport, childcare, etc)</h4>
-                    <input type="number" placeholder="Enter Amount in $"
+                    <input placeholder="Enter Amount in $"
                     onChange={(e)=>setTimeout(()=>{this.setState({v5:e.target.value})},3000)}/>
-
-
                 </div>
                 <div className="graph">
                     <div className="modal">
@@ -78,8 +78,8 @@ class Calculator extends Component {
                     </div>
                 <ReactFC {...chartConfigs} />
                 <p style={{color:"#49DCFA",textAlign:"center"}}>Assumptions</p>
-                {total!==0 ? <h3 style={{fontWeight:"normal"}}>A serious illness with recovery lasting <span style={{color:"#49DCFA"}}>12 months</span> could put your
-                    finances down by <span style={{color:"#49DCFA"}}>${total}</span> today and by <span style={{color:"#49DCFA"}}>${total*1.3}</span> in 10 years.</h3>:null}
+                {newTotal!==0 ? <h3 style={{fontWeight:"normal"}}>A serious illness with recovery lasting <span style={{color:"#49DCFA"}}>12 months</span> could put your
+                    finances down by <span style={{color:"#49DCFA"}}>${newTotal}</span> today and by <span style={{color:"#49DCFA"}}>${newTotal*1.3}</span> in 10 years.</h3>:null}
                      <a href="#" class="btn">Start Comparing Quotes</a>
                 </div>
                 
