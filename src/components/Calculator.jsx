@@ -14,11 +14,11 @@ class Calculator extends Component {
         v5:0
     }
     render() {
-        const a1= parseInt(this.state.v1)
-        const a2= parseInt(this.state.v2)
-        const a3= parseInt(this.state.v3)
-        const a4= parseInt(this.state.v4)
-        const a5= parseInt(this.state.v5)
+        const a1= parseInt(this.state.v1)|| 0
+        const a2= parseInt(this.state.v2)|| 0
+        const a3= parseInt(this.state.v3)|| 0
+        const a4= parseInt(this.state.v4)|| 0
+        const a5= parseInt(this.state.v5)|| 0
         
         var total=a1+a2+a3+a4-a5
         var newTotal =(isNaN(total) ? 0 : total);
